@@ -8,6 +8,8 @@
     "test": "mocha test/unit test/int",
     "test:unit": "mocha test/unit",
     "test:int": "mocha test/int",
+    "test:watch": "nodemon -i test/output -x mocha --bail test/unit test/int test/func",
+    "test:coverage": "nyc _mocha test/unit test/int && nyc report -r html && nyc check-coverage",
     "release:test": "set -uex; yarn test; npm version prerelease; npm publish --tag testing",
     "release:patch": "set -uex; git pull; rm -rf node_modules; yarn; yarn run test:coverage; npm version patch; git push; npm publish; git push --tags"
   },
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0"
   }
 }
