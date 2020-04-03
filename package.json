@@ -4,9 +4,12 @@
   "main": "lib/MhioLogger.js",
   "license": "MIT",
   "scripts": {
+    "ci": "yarn test",
     "test": "mocha test/unit test/int",
     "test:unit": "mocha test/unit",
-    "test:int": "mocha test/int"
+    "test:int": "mocha test/int",
+    "release:test": "set -uex; yarn test; npm version prerelease; npm publish --tag testing",
+    "release:patch": "set -uex; git pull; rm -rf node_modules; yarn; yarn run test:coverage; npm version patch; git push; npm publish; git push --tags"
   },
   "dependencies": {
     "pino": "^5.17.0",
