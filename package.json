@@ -2,6 +2,21 @@
   "name": "@mhio/node-logger",
   "version": "0.1.1",
   "main": "lib/MhioLogger.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhio/node-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhio/node-logger/issues"
+  },
+  "homepage": "https://github.com/mhio/node-logger#readme",
+  "keywords": [
+    "mhio",
+    "log",
+    "logging",
+    "pino"
+  ],
+  "author": "mhio",
   "license": "MIT",
   "scripts": {
     "ci": "yarn test",
