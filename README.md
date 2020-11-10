@@ -1,9 +1,7 @@
 @mhio/logger
 -----------
 
-Node logging with `pino`/`debug`.
-
-Also see [`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
+Node logging with [`pino`](https://github.com/pinojs/pino) and [`debug`](https://github.com/visionmedia/debug).
 
 Setup a base logger in `Logger.js`
 ```
@@ -23,9 +21,12 @@ logger.info({ msg: 'test', data: {} })
 debug('test', { ok: true })
 ```
 
-### Changelog
+## Changelog
 
 0.3.0 Upgrade to pino 6, remove debug as it's a runtime injection
 
 0.2.0 Remove `{namespace}` duplication from loggers metadata
 
+## Related
+
+[`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
