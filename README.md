@@ -1,7 +1,7 @@
 @mhio/logger
 -----------
 
-Node logging with `pino`/`debug`
+Node logging with `pino`/`debug`. Also see [`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
 
 Setup a base logger in `Logger.js`
 ```
@@ -27,4 +27,3 @@ debug('test', { ok: true })
 
 0.2.0 Remove `{namespace}` duplication from loggers metadata
 
-Related: [`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
