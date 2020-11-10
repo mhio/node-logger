@@ -1,7 +1,24 @@
+@mhio/logger
+-----------
 
-Node logging with pino
+Node logging with `pino`/`debug`
+
+Setup a base logger in `Logger.js`
 ```
 import { MhioLogger } from '@mhio/node-logger'
+export const Logger = new MhioLogger('your:prefix')
+```
+
+Then in each module
+```
+import Logger from '@mhio/node-logger'
+const { logger, debug } = Logger.ns('myModule')
+
+// Pino
+logger.info({ msg: 'test', data: {} })
+
+// DEBUG="your:prefix" node app.js
+debug('test', { ok: true })
 ```
 
 ### Changelog

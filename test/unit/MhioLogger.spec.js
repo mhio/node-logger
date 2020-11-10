@@ -16,4 +16,13 @@ describe('unit::MhioLogger', function(){
     expect(Logger.joinNamespace('two', 'ending')).to.equal('test:two:ending')
   })
 
+  it('should return a logger and debug for ns', function(){
+    const Logger = new MhioLogger('test')
+    const ns = Logger.ns('thr')
+    expect(ns).to.containSubset({})
+    expect(ns.debug).to.be.a('function')
+    expect(ns.logger).to.be.a('object')
+    expect(ns.logger.info).to.be.a('function')
+  })
+
 })
