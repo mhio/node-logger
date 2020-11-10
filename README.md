@@ -1,7 +1,9 @@
 @mhio/logger
 -----------
 
-Node logging with `pino`/`debug`. Also see [`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
+Node logging with `pino`/`debug`.
+
+Also see [`@mhio/node-logger-http`](https://github.com/mhio/node-logger-http)
 
 Setup a base logger in `Logger.js`
 ```
