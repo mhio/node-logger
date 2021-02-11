@@ -3,9 +3,13 @@
 
 Node logging with [`pino`](https://github.com/pinojs/pino) and [`debug`](https://github.com/visionmedia/debug).
 
+```
+yarn add @mhio/logger
+```
+
 Setup a base logger in `./logger.js`
 ```
-import { MhioLogger } from '@mhio/node-logger'
+import { MhioLogger } from '@mhio/logger'
 export const Logger = new MhioLogger('your:log:prefix')
 export default Logger
 ```
