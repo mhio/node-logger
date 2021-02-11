@@ -1,10 +1,10 @@
-@mhio/logger
+@mhio/node-logger
 -----------
 
 Node logging with [`pino`](https://github.com/pinojs/pino) and [`debug`](https://github.com/visionmedia/debug).
 
 ```
-yarn add @mhio/logger
+yarn add @mhio/node-logger
 ```
 
 Setup a base logger in `./logger.js`
