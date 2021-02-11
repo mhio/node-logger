@@ -1,6 +1,6 @@
 {
   "name": "@mhio/node-logger",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "lib/MhioLogger.js",
   "repository": {
     "type": "git",
