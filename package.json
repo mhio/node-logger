@@ -2,6 +2,7 @@
   "name": "@mhio/node-logger",
   "version": "0.5.2",
   "main": "lib/MhioLogger.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mhio/node-logger.git"
