@@ -3,15 +3,16 @@
 
 Node logging with [`pino`](https://github.com/pinojs/pino) and [`debug`](https://github.com/visionmedia/debug).
 
-Setup a base logger in `Logger.js`
+Setup a base logger in `./logger.js`
 ```
 import { MhioLogger } from '@mhio/node-logger'
-export const Logger = new MhioLogger('your:prefix')
+export const Logger = new MhioLogger('your:log:prefix')
+export default Logger
 ```
 
 Then in each module
 ```
-import Logger from '@mhio/node-logger'
+import Logger from './logger'
 const { logger, debug } = Logger.ns('myModule')
 
 // Pino
