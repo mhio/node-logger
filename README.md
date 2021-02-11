@@ -9,14 +9,20 @@ yarn add @mhio/logger
 
 Setup a base logger in `./logger.js`
 ```
-import { MhioLogger } from '@mhio/logger'
+import { MhioLogger } from '@mhio/node-logger'
 export const Logger = new MhioLogger('your:log:prefix')
 export default Logger
+// or
+const { MhioLogger } = require('@mhio/node-logger')
+const Logger = new MhioLogger('your:log:prefix')
+module.exports = Logger
 ```
 
 Then in each module
 ```
 import Logger from './logger'
+const Logger = require('./logger')
+
 const { logger, debug } = Logger.ns('myModule')
 
 // Pino
